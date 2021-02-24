@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="kursProjectV3.pages.UserMainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:kursProjectV3.pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top">
+            <DockPanel>
+                <Image Height="125"  Source="../logo.jpg" ></Image>
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" TextWrapping="WrapWithOverflow" x:Name="GreetingsText">
+                        <TextBlock.Effect>
+                            <DropShadowEffect Color="#FFFF7F27" ShadowDepth="2" Direction="270"></DropShadowEffect>
+                        </TextBlock.Effect>
+                        <TextBlock.Text >Приветствуем,</TextBlock.Text>
+                    </TextBlock>
+                    <Button MaxHeight="20" MaxWidth="150" VerticalAlignment="Bottom" Background="#FFFF7F27" Foreground="White" Click="ToUserCabinet">личный кабинет</Button>
+                </StackPanel>
+            </DockPanel>
+            <Rectangle Fill="#FFFF7F27" Height="15"/>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock FontSize="25" HorizontalAlignment="Center">Выберите действие</TextBlock>
+            <Button FontSize="25"  Margin="10 5 10 5" Background="#FF287BDE" Foreground="White" Click="ToFindDirection" >Поиск маршрута</Button>
+            <Button FontSize="25" Margin="10 5 10 5" Background="#FF287BDE" Foreground="White" x:Name="DirectionsControl" Click="ToRunsControl" Visibility="Collapsed">Управление маршрутами и рейсами</Button>
+            <Button FontSize="25" Margin="10 5 10 5" Background="#FF287BDE" Foreground="White" Click="ToAccountControl" x:Name="AccountControl" Visibility="Collapsed">Управление аккаунами</Button>
+            <Button FontSize="25" Margin="10 5 10 5" Background="#FF287BDE" Foreground="White" Click="ToMessages" x:Name="Messages">Обратная связь</Button>
+        </StackPanel>
+    </DockPanel>
+</UserControl>

@@ -1,0 +1,10 @@
+﻿<Window x:Class="kursProjectV3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kursProjectV3"
+        mc:Ignorable="d"
+        Title="Easy Trans Helper" MinWidth="728" MinHeight="451" Height="451" Width="728" MaxHeight="451" MaxWidth="728" BorderBrush="#FF287BDE" Foreground="#FF287BDE" OpacityMask="#FF287BDE" Icon="logo.ico">
+
+</Window>

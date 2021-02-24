@@ -1,0 +1,100 @@
+﻿<UserControl x:Class="kursProjectV3.pages.Messages"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:kursProjectV3.pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Loaded="UserControl_Loaded">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top">
+            <DockPanel>
+                <Image Height="125"  Source="../logo.jpg" ></Image>
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" TextWrapping="WrapWithOverflow" x:Name="GreetingsText">
+                        <TextBlock.Effect>
+                            <DropShadowEffect Color="#FFFF7F27" ShadowDepth="2" Direction="270"></DropShadowEffect>
+                        </TextBlock.Effect>
+                        <TextBlock.Text >Обратная связь</TextBlock.Text>
+                    </TextBlock>
+                    <Button MaxHeight="20" MaxWidth="150" VerticalAlignment="Bottom" Background="#FFFF7F27" Foreground="White" Click="ToUserCabinet">личный кабинет</Button>
+                </StackPanel>
+            </DockPanel>
+            <Rectangle Fill="#FFFF7F27" Height="15"/>
+        </StackPanel>
+        <StackPanel x:Name="ShowAllMessages" Visibility="Visible" DockPanel.Dock="Top" >
+            
+            <Button x:Name="NewMessage" FontSize="20" Margin="0 0 0 5" Background="#FF287BDE" Foreground="White" Click="NewMessage_Click">Написать </Button>
+            <ScrollViewer Height="235">
+                <StackPanel >
+                    <TextBlock FontSize="20" HorizontalAlignment="Center"> Входящие </TextBlock>
+                    <TextBlock FontSize="18" x:Name="NoIncoming" Visibility="Visible">У вас нет входящих сообщений</TextBlock>
+                    <DataGrid x:Name="InMessages" Visibility="Visible"  AutoGenerateColumns="False" IsReadOnly="True" Foreground="#FF287BDE" BorderBrush="AliceBlue" VerticalGridLinesBrush="White" HorizontalGridLinesBrush="AliceBlue" FontSize="15" MouseLeftButtonDown="InMessages_MouseDoubleClick">
+                        <DataGrid.Columns >
+                            <DataGridTextColumn Binding="{Binding IsReaded}" Header="" Width="0.4*" ></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding headerMessage}" Header="Заголовок" Width="*" ></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <TextBlock FontSize="20" HorizontalAlignment="Center"> Исходящие</TextBlock>
+                    <TextBlock FontSize="18" x:Name="NoOutcoming" Visibility="Visible">У вас нет исходящих сообщений</TextBlock>
+
+                    
+                    <DataGrid x:Name="OutMessages"  Visibility="Visible"  AutoGenerateColumns="False" IsReadOnly="True" Foreground="#FF287BDE" BorderBrush="AliceBlue" VerticalGridLinesBrush="White" HorizontalGridLinesBrush="AliceBlue" FontSize="15" MouseLeftButtonDown="OutMessages_MouseDoubleClick">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding IsReaded}" Header="" Width="0.4*" ></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding headerMessage}" Header="Заголовок" Width="*"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" DockPanel.Dock="Bottom" MaxHeight="70">
+                <Button Margin="5 5 5 5 " MinWidth="300" MinHeight="60" FontSize="25" Background="#FF287BDE" Foreground="White" Click="ToUserMainPage">На главную</Button>
+            </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        
+        </StackPanel>
+        <StackPanel x:Name="WriteNewMessage" DockPanel.Dock="Top" HorizontalAlignment="Center" Visibility="Collapsed">
+            <StackPanel Orientation="Horizontal" x:Name="ChooseUsers">
+                <TextBlock FontSize="20">Кому:</TextBlock>
+                <ComboBox x:Name="SelectUser" SelectedIndex="0" Margin="55 0 0 0" Width="100" Foreground="#FF287BDE" FontSize="18"></ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="20" Margin="0 5 5 0">Заголовок:</TextBlock>
+                <TextBox x:Name="EnterHeader" Margin=" 2 5 5 5" Width="400" BorderBrush="LightBlue" Foreground="#FF287BDE" VerticalAlignment="Center" TextChanged="EnterHeader_TextChanged" FontSize="18"></TextBox>
+                <TextBlock x:Name="EnterHeaderError"  Foreground="red" Width="150" FontSize="12"></TextBlock>
+            </StackPanel>
+            <TextBlock FontSize="20">Текст сообщения:</TextBlock>
+            <ScrollViewer BorderThickness="2">
+                <TextBox Height="165" x:Name="MessageText" BorderBrush="LightBlue" TextWrapping="Wrap" FontSize="16" Foreground="#FF287BDE"></TextBox>
+            </ScrollViewer>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" DockPanel.Dock="Bottom" MaxHeight="70">
+                <Button Margin="5 0 0 5 " MinWidth="300" MinHeight="60" FontSize="25" Background="#FF287BDE" Foreground="White" Click="Button_Click" >Назад</Button>
+                <Button Margin="5 0 0 5 " MinWidth="300" MinHeight="60" FontSize="25" Background="#FFFF7F27" Foreground="White"  Click="SendMessageButtonClick">Отправить</Button>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel x:Name="ReadMessage" Visibility="Collapsed" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal"  >
+                <TextBlock FontSize="20" VerticalAlignment="Center">От:</TextBlock>
+                <TextBlock x:Name="Sender" Margin="30 5 0 0"   FontSize="18" VerticalAlignment="Center"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"  >
+                <TextBlock FontSize="20" VerticalAlignment="Center">Кому:</TextBlock>
+                <TextBlock x:Name="Adresee" Margin="5 5 0 0"   FontSize="18" VerticalAlignment="Center"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="20" Margin="0 5 0 5">Заголовок:</TextBlock>
+                <TextBlock x:Name="Header" Margin=" 7 5 5 5" Width="400" FontSize="18" VerticalAlignment="Center"></TextBlock>
+                <TextBlock  Foreground="red" Width="150" FontSize="12"></TextBlock>
+            </StackPanel>
+            <TextBlock FontSize="20">Текст сообщения:</TextBlock>
+            <ScrollViewer>
+                <Border BorderThickness="1" BorderBrush="#FF287BDE">
+                    <TextBlock MinHeight="100" x:Name="Text" FontSize="16" Margin="5 0 0 5"></TextBlock>
+                </Border>
+            </ScrollViewer>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" DockPanel.Dock="Bottom" MaxHeight="70">
+                <Button Margin="5 0 0 5 " MinWidth="300" MinHeight="60" FontSize="25" Background="#FF287BDE" Foreground="White" Click="Button_Click" >Назад</Button>
+                 </StackPanel>
+        </StackPanel>
+    </DockPanel>
+</UserControl>

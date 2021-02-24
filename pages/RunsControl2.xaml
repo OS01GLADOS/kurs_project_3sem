@@ -1,0 +1,125 @@
+﻿<UserControl x:Class="kursProjectV3.pages.RunsControl2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:kursProjectV3.pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Loaded="Page_Loaded">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top">
+            <DockPanel>
+                <Image Height="125"  Source="../logo.jpg" ></Image>
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" TextWrapping="WrapWithOverflow">
+                        <TextBlock.Effect>
+                            <DropShadowEffect Color="#FFFF7F27" ShadowDepth="2" Direction="270"></DropShadowEffect>
+                        </TextBlock.Effect>
+                        <TextBlock.Text>Управление маршрутами и рейсами</TextBlock.Text>
+                    </TextBlock>
+                    <Button MaxHeight="20" MaxWidth="150" VerticalAlignment="Bottom" Background="#FFFF7F27" Foreground="White" Click="ToUserCabinet">личный кабинет</Button>
+                </StackPanel>
+            </DockPanel>
+            <Rectangle Fill="#FFFF7F27" Height="15"/>
+        </StackPanel>
+        <ScrollViewer>
+            <StackPanel>
+                <StackPanel HorizontalAlignment="Center" Margin="0 5 0 0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock x:Name="ForAdminText" FontSize="20" VerticalAlignment="Center" Margin="0 0 5 0">Текущий пользователь</TextBlock>
+                        <ComboBox x:Name="ForAdmin" SelectedIndex="0" SelectionChanged="ForAdmin_SelectionChanged" FontSize="20" Width="200" Foreground="#FF287BDE"></ComboBox>
+                    </StackPanel>
+                    <TextBlock FontSize="20" TextAlignment="Center">Все маршруты</TextBlock>
+                </StackPanel>
+                <DataGrid x:Name="AllDirections" AutoGenerateColumns="False" IsReadOnly="True" MouseDoubleClick="AllDirections_MouseDoubleClick" Foreground="#FF287BDE" BorderBrush="AliceBlue" VerticalGridLinesBrush="White" HorizontalGridLinesBrush="AliceBlue" FontSize="15">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Direction}" Header="Номер маршрута" Width="1*" ></DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding DepartingPoint}" Header="Откуда" Width="1*"></DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding ArrivalPoint}" Header="Куда" Width="1*"></DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding DepartingTime}" Header="Время отправления" Width="1*"></DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding RunsCountByDir}" Header="Проведено рейсов" Width="1*"></DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <TextBlock x:Name="NoDirections" Visibility="Collapsed" FontSize="20" TextAlignment="Center">Вы не создали ни одного маршрута</TextBlock>
+                <Button Click="Button_Click" Foreground="White" Background="#FFFF7F27" FontSize="18">Добавить маршрут</Button>
+                <StackPanel x:Name="FormToAddDirection" Visibility="Collapsed" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 5 0 0">
+                        <TextBlock FontSize="18">Город отправления:</TextBlock>
+                        <TextBox x:Name="DepartingPointIn" BorderBrush="LightBlue" TextChanged="DepartingPointIn_TextChanged" Width="300" FontSize="18"></TextBox>
+                        <TextBlock x:Name="DepartingPointInError" Foreground="red" FontSize="12" Width="150"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 5 0 0">
+                        <TextBlock FontSize="18">Город назначения:</TextBlock>
+                        <TextBox x:Name="ArrivalPointIn" BorderBrush="LightBlue" TextChanged="ArrivalPointIn_TextChanged" Width="300" FontSize="18"></TextBox>
+                        <TextBlock x:Name="ArrivalPointInError" Foreground="red" Width="150" FontSize="12"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 5 0 0">
+                        <TextBlock FontSize="18">Цена за перевозку 1 кг, р.:</TextBlock>
+                        <TextBox x:Name="PriceIn" BorderBrush="LightBlue" TextChanged="PriceIn_TextChanged" Width="300" FontSize="18"></TextBox>
+                        <TextBlock x:Name="PriceInError" Foreground="red" Width="150" FontSize="12"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 5 0 0">
+                        <TextBlock FontSize="18">Время отправления</TextBlock>
+                        <TextBox x:Name="DepartureTimeIn" BorderBrush="LightBlue" TextChanged="DepartureTimeIn_TextChanged" Width="300" FontSize="18"></TextBox>
+                        <TextBlock x:Name="DepartureTimeInError" Foreground="red" Width="150" FontSize="12"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 5 0 0">
+                        <TextBlock  FontSize="18">Время прибытия</TextBlock>
+                        <TextBox x:Name="ArrivalTime" BorderBrush="LightBlue" TextChanged="ArrivalTime_TextChanged" Width="300" FontSize="18"></TextBox>
+                        <TextBlock x:Name="ArrivalTimeInError" Foreground="red" Width="150" FontSize="12"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 5 0 0">
+                        <TextBlock  FontSize="18">Вместимость, кг.</TextBlock>
+                        <TextBox x:Name="CapacityIn" BorderBrush="LightBlue" TextChanged="CapacityIn_TextChanged" Width="300" FontSize="18"></TextBox>
+                        <TextBlock x:Name="CapacityInError" Foreground="red" Width="150" FontSize="12"></TextBlock>
+                    </StackPanel>
+                    <Button x:Name="AddDirectionButton" Click="AddDirectionButton_Click" FontSize="18" Foreground="White" Background="#FF287BDE" >Добавить</Button>
+                </StackPanel>
+                <Button x:Name="DeleteDirection" Visibility="Collapsed" Click="DeleteDirection_Click" FontSize="18" Foreground="White" Background="#FF287BDE">Удалить маршрут</Button>
+                <Expander Header="Рейсы по этому маршруту" x:Name="RunsOnChosenDirectionStats" Visibility="Collapsed" FontSize="20"><!-- here -->
+                    <StackPanel>
+                        <DataGrid x:Name="RunsOnChosenDirection" AutoGenerateColumns="False" IsReadOnly="True" MouseDoubleClick="RunsOnChosenDirection_MouseDoubleClick" Foreground="#FF287BDE" BorderBrush="AliceBlue" VerticalGridLinesBrush="White" HorizontalGridLinesBrush="AliceBlue" FontSize="15">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Binding="{Binding Run}" Header="Номер рейса" Width="1*"></DataGridTextColumn>
+                                <DataGridTextColumn Binding="{Binding DepartureDate}" Header="Дата" Width="1*"></DataGridTextColumn>
+                                <DataGridTextColumn Binding="{Binding OrderCount}" Header="Колличество заказов" Width="1*"></DataGridTextColumn>
+                                <DataGridTextColumn Binding="{Binding RunStatus}" Header="Статус " Width="1*"></DataGridTextColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <TextBlock x:Name="NoRuns" FontSize="18">по даннному маршруту нет рейсов</TextBlock>
+                        <Button Click="Button_Click_1" Foreground="White" Background="#FFFF7F27" FontSize="18" >Добавить рейс по выбранному машруту</Button>
+                        <StackPanel x:Name="AddRun" Visibility="Collapsed" HorizontalAlignment="Center">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 5 0 0">
+                                <TextBlock FontSize="18">Дата отправления:</TextBlock>
+                                <TextBox x:Name="RunDepartingTime" BorderBrush="LightBlue" TextChanged="RunDepartingTime_TextChanged" Width="300" FontSize="18"></TextBox>
+                                <TextBlock x:Name="RunDepartingTimeError" Foreground="red" Width="150" FontSize="12"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 5 0 5">
+                                <TextBlock FontSize="18">Вместимость, кг.:</TextBlock>
+                                <TextBox x:Name="RunAvailableCapacity" BorderBrush="LightBlue" TextChanged="RunAvailableCapacity_TextChanged" Width="300" FontSize="18"></TextBox>
+                                <TextBlock x:Name="RunAvailableCapacityError" Foreground="red" Width="150" FontSize="12"></TextBlock>
+                            </StackPanel>
+                            <Button x:Name="AddRunButton" Click="AddRunButton_Click" FontSize="18" Foreground="White" Background="#FF287BDE">Добавить</Button>
+                        </StackPanel>
+                        <Button x:Name="deleteRun" Visibility="Collapsed" Click="DeleteRun_Click" >Отменить рейс</Button>
+                        <Button x:Name="completeRun" Visibility="Collapsed" Click="CompleteRun_Click">Подтвердить прибытие рейса</Button>
+                        <StackPanel x:Name="AllOrdersOnCurrentRun">
+                            <TextBlock FontSize="18" TextAlignment="Center" x:Name="AllOrdersTopic">Все заказы на данный рейс</TextBlock>
+                            <DataGrid x:Name="AllOrdersOnCurrentRunTable" Visibility="Collapsed" AutoGenerateColumns="False" IsReadOnly="True" Foreground="#FF287BDE" BorderBrush="AliceBlue" VerticalGridLinesBrush="White" HorizontalGridLinesBrush="AliceBlue" FontSize="15">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Binding="{Binding Client}" Header="Клиент" Width="1*"></DataGridTextColumn>
+                                    <DataGridTextColumn Binding="{Binding CargoWeight}" Header="Вес груза" Width="1*"></DataGridTextColumn>
+                                    <DataGridTextColumn Binding="{Binding phoneNumber}" Header="Телефон клиента" Width="1*"></DataGridTextColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <TextBlock x:Name="NoOrders" FontSize="20" Visibility="Collapsed">На данный рейс ещё нет заказов</TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </Expander>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" DockPanel.Dock="Bottom" MaxHeight="70">
+                    <Button Margin="5 0 0 5 " MinWidth="300" MinHeight="60" FontSize="25" Background="#FF287BDE" Foreground="White" Click="ToUserMainPage">На главную</Button>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </DockPanel>
+</UserControl>

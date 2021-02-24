@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="kursProjectV3.pages.FindDirection"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:kursProjectV3.pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Loaded="OnPageLoaded">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top">
+            <DockPanel>
+                <Image Height="125"  Source="../logo.jpg" ></Image>
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" TextWrapping="WrapWithOverflow">
+                        <TextBlock.Effect>
+                            <DropShadowEffect Color="#FFFF7F27" ShadowDepth="2" Direction="270"></DropShadowEffect>
+                        </TextBlock.Effect>
+                        <TextBlock.Text>Поиск маршрута</TextBlock.Text>
+                    </TextBlock>
+                    <Button MaxHeight="20" MaxWidth="150" VerticalAlignment="Bottom" Background="#FFFF7F27" Foreground="White" Click="ToUserCabinet">личный кабинет</Button>
+                </StackPanel>
+            </DockPanel>
+            <Rectangle Fill="#FFFF7F27" Height="15"/>
+        </StackPanel>
+        <DockPanel>
+            <StackPanel  HorizontalAlignment="Center" DockPanel.Dock="Top" Margin="0 5 0 5">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" MaxHeight="40" DockPanel.Dock="Top" Margin="0 5 0 5" >
+                    <TextBlock FontSize="20" Foreground="#FF287BDE" Margin="5 0 5 0">Откуда:</TextBlock>
+                    <TextBox MinWidth="100" FontSize="20" x:Name="FromPoint" Foreground="#FF287BDE" Width="180"></TextBox>
+                    <TextBlock FontSize="20" Foreground="#FF287BDE" Margin="5 0 5 0">Куда:</TextBlock>
+                    <TextBox MinWidth="100" FontSize="20" x:Name="ToPoint" Foreground="#FF287BDE" Width="180"></TextBox>
+                    <Button Background="#FF287BDE" Foreground="White" FontSize="25" Click="Button_Click" Width="130" >Показать</Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left" >
+                    <TextBlock FontSize="20" Foreground="#FF287BDE" Margin="5 0 5 0">Сортировать по </TextBlock>
+                    <ComboBox FontSize="20" x:Name="HowToSort" SelectedIndex="0" SelectionChanged="HowToSort_SelectionChanged" Foreground="#FF287BDE" Width="180"></ComboBox>
+                    <ComboBox FontSize="20" x:Name="Order" SelectedIndex="0" SelectionChanged="Order_SelectionChanged" Foreground="#FF287BDE" Width="180" Margin="5 0 5 0"></ComboBox>
+                </StackPanel>
+            </StackPanel>
+            <ScrollViewer DockPanel.Dock="Top">
+                <StackPanel>
+                    <DataGrid AutoGenerateColumns="False" IsReadOnly="True" x:Name="AllDirections" MouseDoubleClick="AllDirections_MouseDoubleClick" Foreground="#FF287BDE" BorderBrush="AliceBlue" VerticalGridLinesBrush="White" HorizontalGridLinesBrush="AliceBlue" FontSize="12" Margin="0 0 0 5">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding DepartingPoint}" Header="Откуда" Width="0.6*"></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding ArrivalPoint}" Header="Куда" Width="0.6*"></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding DepartingTime}" Header="Отправление" Width="0.7*"></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding ArrivalTime}" Header="Прибытие" Width="0.7*"></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding TimeToReach}" Header="Время в пути, ч." Width="1*"></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding Price}" Header="Цена за 1 кг" Width="0.8*"></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding DepartureDate}" Header="Дата отправления" Width="1*"></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding Carrier}" Header="Перевозчик" Width="0.9*"></DataGridTextColumn>                        
+                        </DataGrid.Columns>  
+                    </DataGrid>
+                    <TextBlock FontSize="20" x:Name="Tip" TextAlignment="Center">Дважды нажмите на результат, для бронирования места</TextBlock>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" DockPanel.Dock="Bottom" MaxHeight="70">
+                        <Button Margin="5 0 0 5 " MinWidth="300" MinHeight="60" FontSize="25" Background="#FF287BDE" Foreground="White" Click="ToUserMainPage" x:Name="ToMainPage">НА ГЛАВНУЮ</Button>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </DockPanel>
+    </DockPanel>
+</UserControl>

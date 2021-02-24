@@ -1,0 +1,66 @@
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\kursProjectV3.csprojAssemblyReference.cache
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\MainWindow.g.cs
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\App.g.cs
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\kursProjectV3_MarkupCompile.cache
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\kursProjectV3_MarkupCompile.lref
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\bin\Debug\kursProjectV3.exe.config
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\bin\Debug\kursProjectV3.exe
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\bin\Debug\kursProjectV3.pdb
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\MainWindow.baml
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\kursProjectV3.g.resources
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\kursProjectV3.Properties.Resources.resources
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\kursProjectV3.csproj.GenerateResource.cache
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\kursProjectV3.csproj.CoreCompileInputs.cache
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\kursProjectV3.exe
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\kursProjectV3.pdb
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\pages\FirstPage.g.cs
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\pages\FirstPage.baml
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\pages\EnterPage.g.cs
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\pages\EnterPage.baml
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\pages\UserMainPage.g.cs
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\pages\UserMainPage.baml
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\pages\UserCabinet.g.cs
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\pages\UserCabinet.baml
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\pages\Registration.g.cs
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\pages\Registration.baml
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\pages\AccountControl.g.cs
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\pages\AccountControl.baml
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\pages\FindDirection.g.cs
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\pages\MakeOrder.g.cs
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\pages\FindDirection.baml
+C:\Users\Дмиртий\source\repos\kursProjectV3\kursProjectV3\obj\Debug\pages\MakeOrder.baml
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\bin\Debug\kursProjectV3.exe.config
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\bin\Debug\kursProjectV3.exe
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\bin\Debug\kursProjectV3.pdb
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\MainWindow.g.cs
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\pages\AccountControl.g.cs
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\pages\EnterPage.g.cs
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\pages\FindDirection.g.cs
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\pages\FirstPage.g.cs
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\pages\MakeOrder.g.cs
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\pages\Registration.g.cs
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\pages\UserCabinet.g.cs
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\pages\UserMainPage.g.cs
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\App.g.cs
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\kursProjectV3_MarkupCompile.cache
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\kursProjectV3_MarkupCompile.lref
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\MainWindow.baml
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\pages\AccountControl.baml
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\pages\EnterPage.baml
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\pages\FindDirection.baml
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\pages\FirstPage.baml
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\pages\MakeOrder.baml
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\pages\Registration.baml
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\pages\UserCabinet.baml
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\pages\UserMainPage.baml
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\kursProjectV3.g.resources
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\kursProjectV3.Properties.Resources.resources
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\kursProjectV3.csproj.GenerateResource.cache
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\kursProjectV3.exe
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\kursProjectV3.pdb
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\kursProjectV3.csproj.CoreCompileInputs.cache
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\pages\RunsControl2.g.cs
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\pages\RunsControl2.baml
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\pages\Messages.g.cs
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\pages\Messages.baml
+D:\mine\Документы\текст\4 семестр\!Курсовая\20.05\kursProjectV3\kursProjectV3\obj\Debug\kursProjectV3.csprojAssemblyReference.cache

@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="kursProjectV3.pages.MakeOrder"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:kursProjectV3.pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top">
+            <DockPanel>
+                <Image Height="125"  Source="../logo.jpg" ></Image>
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" TextWrapping="WrapWithOverflow">
+                        <TextBlock.Effect>
+                            <DropShadowEffect Color="#FFFF7F27" ShadowDepth="2" Direction="270"></DropShadowEffect>
+                        </TextBlock.Effect>
+                        <TextBlock.Text>Оформление заказа</TextBlock.Text>
+                    </TextBlock>
+                    <Button MaxHeight="20" MaxWidth="150" VerticalAlignment="Bottom" Background="#FFFF7F27" Foreground="White" Click="ToUserCabinet">личный кабинет</Button>
+                </StackPanel>
+            </DockPanel>
+            <Rectangle Fill="#FFFF7F27" Height="15"/>
+        </StackPanel>
+        <StackPanel Margin="20 0 20 0">
+            <TextBlock FontSize="30" HorizontalAlignment="Center">Проверьте данные заказа</TextBlock>
+            <TextBlock FontSize="18" x:Name="Direction">Маршрут:</TextBlock>
+            <TextBlock FontSize="18" x:Name="DepartureDate">Дата отправления:</TextBlock>
+            <TextBlock FontSize="18" x:Name="DepartureTime">Отправление:</TextBlock>
+            <TextBlock FontSize="18" x:Name="ArrivalTime">Прибытие:</TextBlock>
+            <TextBlock FontSize="18" x:Name="WeightOut">Стоимость заказа:</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="20" >Введите массу груза:</TextBlock>
+                <TextBox Margin="0 0 0 5" FontSize="16" x:Name="EnterWeight" BorderBrush="LightBlue" TextChanged="EnterWeight_TextChanged" Width="400" VerticalAlignment="Center"></TextBox>
+            </StackPanel>
+            <TextBlock x:Name="EnterError" Foreground="red" Visibility="Visible" Margin="5 0 5 5" TextAlignment="Center"></TextBlock>
+            <Button  MinHeight="30" Background="#FFFF7F27" Foreground="White" FontSize="20" Click="ToMakeOrder">Оформить заказ</Button>
+            <Button MinHeight="5" Background="#FF287BDE" Foreground="White" FontSize="20" Click="ToFindDirection">назад к поиску маршрутов</Button>
+        </StackPanel>
+    </DockPanel>
+</UserControl>
